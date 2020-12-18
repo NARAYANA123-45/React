@@ -1,0 +1,34 @@
+import React, {Component} from 'react';
+class Counter extends Component {
+ 
+    state = {
+           count: 1
+       };
+    
+   increment = () => {
+     this.setState({
+         count: this.state.count +1
+     });
+   };
+   decrement = () => {
+    if(this.state.count>1){
+    this.setState({    
+        count: this.state.count -1
+    });
+    }  
+};
+    render() {
+     return(
+        <div>
+            <div>count: {this.state.count}</div>
+            <button onClick={this.increment}>increment</button>
+            <button onClick={this.decrement}>decrement</button>
+        </div>
+        )
+    }
+}
+export default Counter
+
+
+
+
